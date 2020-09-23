@@ -1,6 +1,6 @@
 {
     "name": "jobq",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "boilerplate for structured task handling.",
     "author": "Carter Himmel",
     "main": "dist/src/index.js",

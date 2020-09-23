@@ -9,7 +9,7 @@ export interface Task {
 /**
  * Represents a cron
  */
-export class Cron<T extends Task> {
+export abstract class Cron<T extends Task> {
 	/**
 	 * The interval that performs our check function
 	 */
@@ -27,10 +27,7 @@ export class Cron<T extends Task> {
 
 	// implementation to handle what you want to do when its time for
 	// this job to complete
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	public end(_: T): void {
-		throw Error(`${this.constructor.name}#end has not been implemented.`);
-	}
+	public abstract end(job: T): void;
 
 	// queue implementation to basically queue up items to fire exactly
 	// when they should and not wait until the next query
@@ -43,10 +40,7 @@ export class Cron<T extends Task> {
 	}
 
 	// this is where you perform your query every this.rate
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	public check() {
-		throw Error(`${this.constructor.name}#check has not been implemented.`);
-	}
+	public abstract check(): void;
 
 	/**
 	 * Initialize the first check and create the internval.
