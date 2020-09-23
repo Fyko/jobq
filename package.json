@@ -1,13 +1,23 @@
 {
     "name": "jobq",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "boilerplate for structured task handling.",
     "author": "Carter Himmel",
-    "main": "dist/src/index.js",
-    "license": "Apache-2.0",
+    "main": "dist/lib/index.js",
+    "typings": "dist/types/index.d.ts",
+    "license": "MIT",
     "files": [
-        "/dist"
+        "dist",
+        "esm"
     ],
+    "exports": {
+        "import": "./esm/index.mjs",
+        "require": "./dist/lib/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Fyko/jobq.git"
+    },
     "scripts": {
         "lint": "eslint src --ext .ts",
         "lint:fix": "eslint src examples --fix --ext .ts",
