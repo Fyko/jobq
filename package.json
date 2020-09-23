@@ -1,5 +1,5 @@
 {
-    "name": "jobq",
+    "name": "@sycer/jobq",
     "version": "0.2.1",
     "description": "boilerplate for structured task handling.",
     "author": "Carter Himmel",
